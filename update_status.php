@@ -1,0 +1,15 @@
+<?php
+
+include 'koneksi.php';
+
+$id = $_GET['id'];
+$status = $_GET['status'];
+
+mysqli_query(
+    $conn,
+    "UPDATE laporan SET status='$status' WHERE id='$id'"
+);
+
+header("Location: laporan.php");
+
+?>
